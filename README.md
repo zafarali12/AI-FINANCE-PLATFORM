@@ -96,37 +96,45 @@ This project was built as a **Final Year Project** demonstrating modern web deve
 ## 📁 Project Structure
 AI-FINANCE-PLATFORM/
 ├── app/
-│   ├── (auth)/              # Sign in / Sign up pages
+│   ├── (auth)/                     # Sign in / Sign up pages
 │   ├── (main)/
-│   │   ├── dashboard/       # Main dashboard with charts & AI chatbot
-│   │   ├── account/         # Account detail + transaction table
-│   │   └── transaction/     # Add/edit transaction
+│   │   ├── dashboard/              # Main dashboard with charts & AI chatbot
+│   │   ├── account/                # Account detail + transaction table
+│   │   └── transaction/            # Add/edit transaction
 │   └── api/
-│       ├── inngest/         # Background job handlers
-│       └── seed/            # Database seeding
-├── actions/                 # Server actions (transactions, accounts, budgets)
+│       ├── inngest/                # Background job handlers
+│       └── seed/                   # Database seeding
+│
+├── actions/                        # Server actions (transactions, accounts, budgets)
+│
 ├── components/
-│   ├── ui/                  # Reusable shadcn/ui components
-│   ├── hero.jsx             # Animated landing page hero
-│   ├── header.jsx           # Navigation with dark mode toggle
-│   ├── chatbase-widget.jsx  # AI chatbot widget
-│   └── theme-toggle.jsx     # Light/dark mode switch
-├── data/                    # Categories and seed data
-├── emails/                  # React Email templates
-│   ├── budget-alert.jsx     # Budget exceeded email
-│   └── monthly-report.jsx   # AI-generated monthly report email
-├── hooks/                   # Custom React hooks
+│   ├── ui/                         # Reusable shadcn/ui components
+│   ├── hero.jsx                    # Animated landing page hero
+│   ├── header.jsx                  # Navigation with dark mode toggle
+│   ├── chatbase-widget.jsx         # AI chatbot widget
+│   └── theme-toggle.jsx            # Light/dark mode switch
+│
+├── data/                           # Categories and seed data
+│
+├── emails/
+│   ├── budget-alert.jsx            # Budget exceeded email
+│   └── monthly-report.jsx          # AI-generated monthly report email
+│
+├── hooks/                          # Custom React hooks
+│
 ├── lib/
-│   ├── prisma.js            # Database client
-│   ├── inngest/             # Background job definitions
+│   ├── prisma.js                   # Database client
+│   ├── inngest/
 │   │   ├── client.js
-│   │   └── functions.js     # Monthly report + budget alert jobs
-│   ├── arcjet.js            # Rate limiting config
-│   └── utils.js             # Helper functions
+│   │   └── functions.js            # Monthly report + budget alert jobs
+│   ├── arcjet.js                   # Rate limiting config
+│   └── utils.js                    # Helper functions
+│
 ├── prisma/
-│   └── schema.prisma        # Database schema
-├── public/                  # Static assets
-├── middleware.js            # Clerk auth middleware
+│   └── schema.prisma               # Database schema
+│
+├── public/                         # Static assets
+├── middleware.js                   # Clerk auth middleware
 └── next.config.mjs
 
 ---
