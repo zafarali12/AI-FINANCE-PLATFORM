@@ -84,11 +84,6 @@ const HeroSection = () => {
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
-          <Link href="https://www.youtube.com/roadsidecoder">
-            <Button size="lg" variant="outline" className="px-8 py-6 text-lg border-2 dark:border-gray-700 dark:hover:bg-gray-800">
-              Watch Demo
-            </Button>
-          </Link>
         </div>
 
         {/* Dashboard Preview */}
