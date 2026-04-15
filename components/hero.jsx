@@ -31,13 +31,12 @@ const HeroSection = () => {
 
   return (
     <section className="relative pt-32 pb-20 px-4 overflow-hidden">
-      {/* Animated Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900 dark:to-blue-900 opacity-50" />
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gray-50 dark:bg-gray-950" />
       
-      {/* Floating Orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-300 dark:bg-blue-600 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl opacity-20 animate-float" />
-      <div className="absolute top-40 right-10 w-72 h-72 bg-purple-300 dark:bg-purple-600 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl opacity-20 animate-float" style={{ animationDelay: '1s' }} />
-      <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-pink-300 dark:bg-pink-600 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl opacity-20 animate-float" style={{ animationDelay: '2s' }} />
+      {/* Subtle Glows */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 dark:bg-blue-600 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-[100px] opacity-20" />
+      <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-blue-400 dark:bg-blue-600 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-[100px] opacity-10" />
 
       <div className="container mx-auto text-center relative z-10">
         {/* Badge */}
@@ -47,12 +46,10 @@ const HeroSection = () => {
         </div>
 
         {/* Main Heading */}
-        <h1 className={`text-5xl md:text-7xl lg:text-8xl font-bold pb-6 ${mounted ? 'animate-fade-in-up stagger-2' : 'opacity-0'}`}>
-          <span className="gradient-title">
-            Manage Your Finances
-          </span>
+        <h1 className={`text-5xl md:text-7xl lg:text-8xl font-bold pb-6 text-gray-900 dark:text-white tracking-tight ${mounted ? 'animate-fade-in-up stagger-2' : 'opacity-0'}`}>
+          Manage Your Finances
           <br />
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+          <span className="text-blue-600 dark:text-blue-400">
             with Intelligence
           </span>
         </h1>
@@ -82,7 +79,7 @@ const HeroSection = () => {
         {/* CTA Buttons */}
         <div className={`flex flex-col sm:flex-row justify-center gap-4 mb-16 ${mounted ? 'animate-fade-in-up stagger-5' : 'opacity-0'}`}>
           <Link href="/dashboard">
-            <Button size="lg" className="px-8 py-6 text-lg group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all">
+            <Button size="lg" className="px-8 py-6 text-lg group bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition-all">
               Get Started Free
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -97,18 +94,15 @@ const HeroSection = () => {
         {/* Dashboard Preview */}
         <div className={`hero-image-wrapper mt-12 ${mounted ? 'animate-scale-in stagger-6' : 'opacity-0'}`}>
           <div ref={imageRef} className="hero-image relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl blur-3xl opacity-20 group-hover:opacity-30 transition-opacity" />
+            <div className="absolute inset-0 bg-blue-500 rounded-xl blur-3xl opacity-10 group-hover:opacity-20 transition-opacity" />
             <Image
               src="/banner.jpeg"
               width={1280}
               height={720}
               alt="Dashboard Preview"
-              className="rounded-xl shadow-2xl border-2 border-gray-200 dark:border-gray-700 mx-auto relative z-10 hover:scale-[1.02] transition-transform duration-500"
+              className="rounded-xl shadow-2xl border-2 border-gray-200 dark:border-gray-800 mx-auto relative z-10 hover:scale-[1.02] transition-transform duration-500"
               priority
             />
-            {/* Floating Elements */}
-            <div className="absolute -top-4 -left-4 w-20 h-20 bg-blue-500 rounded-full blur-2xl opacity-50 animate-float" />
-            <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-purple-500 rounded-full blur-2xl opacity-50 animate-float" style={{ animationDelay: '1.5s' }} />
           </div>
         </div>
       </div>

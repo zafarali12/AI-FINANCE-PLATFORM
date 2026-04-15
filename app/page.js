@@ -13,6 +13,7 @@ import {
 import HeroSection from "@/components/hero";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import CountUp from "react-countup";
 
 const LandingPage = () => {
   return (
@@ -22,14 +23,22 @@ const LandingPage = () => {
 
       {/* Stats Section */}
       <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 opacity-50" />
+        <div className="absolute inset-0 bg-blue-50/50 dark:bg-gray-800/50" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {statsData.map((stat, index) => (
               <ScrollReveal key={index} delay={index * 100}>
                 <div className="text-center group">
-                  <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
-                    {stat.value}
+                  <div className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 group-hover:scale-110 transition-transform">
+                    <CountUp
+                      end={stat.value}
+                      decimals={stat.decimals || 0}
+                      prefix={stat.prefix || ""}
+                      suffix={stat.suffix || ""}
+                      duration={2.5}
+                      enableScrollSpy={true}
+                      scrollSpyOnce={true}
+                    />
                   </div>
                   <div className="text-gray-600 dark:text-gray-400 font-medium">{stat.label}</div>
                 </div>
@@ -44,10 +53,8 @@ const LandingPage = () => {
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-                  Everything You Need
-                </span>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
+                Everything You Need
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                 Powerful features to help you take control of your financial future
@@ -61,7 +68,7 @@ const LandingPage = () => {
                   className="p-6 card-hover group bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-colors h-full"
                 >
                   <CardContent className="space-y-4 pt-4">
-                    <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div className="w-14 h-14 rounded-lg bg-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform">
                       {feature.icon}
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
@@ -75,14 +82,11 @@ const LandingPage = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-800 dark:to-gray-900" />
+      <section className="py-20 relative overflow-hidden bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-                How It Works
-              </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900 dark:text-white">
+              How It Works
             </h2>
             <p className="text-center text-gray-600 dark:text-gray-400 mb-16">
               Get started in three simple steps
@@ -93,11 +97,11 @@ const LandingPage = () => {
               <ScrollReveal key={index} delay={index * 150}>
                 <div className="text-center group">
                   <div className="relative">
-                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                    <div className="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg relative z-10">
                       {step.icon}
                     </div>
                     {index < howItWorksData.length - 1 && (
-                      <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 opacity-30" />
+                      <div className="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-blue-200 dark:bg-blue-800" />
                     )}
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">{step.title}</h3>
@@ -113,10 +117,8 @@ const LandingPage = () => {
       <section id="testimonials" className="py-20 relative">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-                What Our Users Say
-              </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900 dark:text-white">
+              What Our Users Say
             </h2>
             <p className="text-center text-gray-600 dark:text-gray-400 mb-16">
               Join thousands of satisfied users managing their finances better
@@ -131,7 +133,7 @@ const LandingPage = () => {
                   <CardContent className="pt-4">
                     <div className="flex items-center mb-6">
                       <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full blur-md opacity-50" />
+                        <div className="absolute inset-0 bg-blue-200 dark:bg-blue-800 rounded-full blur-md opacity-50" />
                         <Image
                           src={testimonial.image}
                           alt={testimonial.name}
@@ -157,11 +159,10 @@ const LandingPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 dark:from-blue-900 dark:via-purple-900 dark:to-pink-900" />
+      <section className="py-32 relative overflow-hidden bg-blue-600 dark:bg-blue-900">
         <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <ScrollReveal>
