@@ -65,7 +65,7 @@ export default async function DebugPage() {
               <div key={acc.id} className="bg-gray-100 p-3 rounded">
                 <p><strong>Name:</strong> {acc.name}</p>
                 <p><strong>Type:</strong> {acc.type}</p>
-                <p><strong>Balance:</strong> ${acc.balance.toString()}</p>
+                <p><strong>Balance:</strong> Rs {acc.balance.toString()}</p>
                 <p><strong>Default:</strong> {acc.isDefault ? "Yes" : "No"}</p>
               </div>
             ))}
@@ -89,7 +89,7 @@ export default async function DebugPage() {
                 <div className="ml-4 mt-2 space-y-1">
                   {user.accounts.map(acc => (
                     <p key={acc.id} className="text-sm">
-                      • {acc.name} ({acc.type}) - ${acc.balance.toString()}
+                      • {acc.name} ({acc.type}) - Rs {acc.balance.toString()}
                     </p>
                   ))}
                 </div>

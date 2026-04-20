@@ -222,15 +222,15 @@ export function TransactionTable({ transactions }) {
         <div class="summary">
           <div class="summary-item">
             <h3>Total Income</h3>
-            <p class="income">$${totalIncome.toFixed(2)}</p>
+            <p class="income">Rs ${totalIncome.toFixed(2)}</p>
           </div>
           <div class="summary-item">
             <h3>Total Expenses</h3>
-            <p class="expense">$${totalExpense.toFixed(2)}</p>
+            <p class="expense">Rs ${totalExpense.toFixed(2)}</p>
           </div>
           <div class="summary-item">
             <h3>Net Balance</h3>
-            <p class="net">$${(totalIncome - totalExpense).toFixed(2)}</p>
+            <p class="net">Rs ${(totalIncome - totalExpense).toFixed(2)}</p>
           </div>
         </div>
 
@@ -252,7 +252,7 @@ export function TransactionTable({ transactions }) {
                 <td><span class="category-badge">${t.category}</span></td>
                 <td class="type-${t.type.toLowerCase()}">${t.type}</td>
                 <td class="type-${t.type.toLowerCase()}">
-                  ${t.type === 'EXPENSE' ? '-' : '+'}$${Number(t.amount).toFixed(2)}
+                  ${t.type === 'EXPENSE' ? '-' : '+'}Rs ${Number(t.amount).toFixed(2)}
                 </td>
               </tr>
             `).join('')}
@@ -636,8 +636,7 @@ export function TransactionTable({ transactions }) {
                         : "text-green-500"
                     )}
                   >
-                    {transaction.type === "EXPENSE" ? "-" : "+"}$
-                    {transaction.amount.toFixed(2)}
+                    {transaction.type === "EXPENSE" ? "-" : "+"}Rs {transaction.amount.toFixed(2)}
                   </TableCell>
                   <TableCell>
                     {transaction.isRecurring ? (

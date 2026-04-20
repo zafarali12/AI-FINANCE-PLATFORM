@@ -16,7 +16,7 @@ export const statsData = [
   },
   {
     value: 2,
-    prefix: "$",
+    prefix: "Rs ",
     suffix: "B+",
     label: "Transactions Tracked",
   },
