@@ -9,7 +9,7 @@
 [![Clerk](https://img.shields.io/badge/Clerk-Auth-6C47FF?style=for-the-badge&logo=clerk)](https://clerk.com/)
 [![Vercel](https://img.shields.io/badge/Deployed-Vercel-black?style=for-the-badge&logo=vercel)](https://ai-finance-platform-steel-psi.vercel.app)
 
-**[🚀 Live Demo](https://ai-finance-platform-steel-psi.vercel.app)**
+
 
 </div>
 
@@ -279,9 +279,6 @@ For Inngest background jobs in production, connect your Vercel deployment to you
 
 ---
 
-## 📸 Screenshots
-
-> Add screenshots of your dashboard, landing page, transaction table, and email reports here.
 
 ---
 
@@ -304,5 +301,6 @@ This project is for educational purposes as a Final Year Project.
 ---
 
 <div align="center">
-Built with ❤️ by <a href="https://github.com/zafarali12">Zafar Ali</a>
+Built with ❤️ by <a href="https://github.com/zafarali12">Zafar Ali</a>, <a href="https://github.com/Muhammaddhassan">Hassan</a>, <a href="https://github.com/usamaashahzad07">Usama</a>
 </div>
+
