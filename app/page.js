@@ -11,6 +11,7 @@ import {
   testimonialsData,
 } from "@/data/landing";
 import HeroSection from "@/components/hero";
+import { ScrollingBar } from "@/components/scrolling-bar";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import CountUp from "react-countup";
@@ -20,6 +21,8 @@ const LandingPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-black">
       {/* Hero Section */}
       <HeroSection />
+      <br />
+      <ScrollingBar />
 
       {/* Stats Section */}
       <section className="py-20 relative overflow-hidden">
@@ -64,7 +67,7 @@ const LandingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuresData.map((feature, index) => (
               <ScrollReveal key={index} delay={index * 100}>
-                <Card 
+                <Card
                   className="p-6 card-hover group bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-colors h-full"
                 >
                   <CardContent className="space-y-4 pt-4">
@@ -127,7 +130,7 @@ const LandingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonialsData.map((testimonial, index) => (
               <ScrollReveal key={index} delay={index * 100}>
-                <Card 
+                <Card
                   className="p-6 card-hover bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-400 transition-colors h-full"
                 >
                   <CardContent className="pt-4">
@@ -185,7 +188,7 @@ const LandingPage = () => {
                 </Link>
                 <div className="flex items-center gap-2 text-white/90">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
                   </svg>
                   <span className="text-sm">No credit card required</span>
                 </div>

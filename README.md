@@ -9,7 +9,10 @@
 [![Clerk](https://img.shields.io/badge/Clerk-Auth-6C47FF?style=for-the-badge&logo=clerk)](https://clerk.com/)
 [![Vercel](https://img.shields.io/badge/Deployed-Vercel-black?style=for-the-badge&logo=vercel)](https://ai-finance-platform-steel-psi.vercel.app)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b596978 ( updated files)
 
 </div>
 
@@ -279,6 +282,10 @@ For Inngest background jobs in production, connect your Vercel deployment to you
 
 ---
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b596978 ( updated files)
 
 ---
 
